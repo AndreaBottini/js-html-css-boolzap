@@ -28,10 +28,45 @@ body {
 .chat_box {
   position: absolute;
   background-color: yellow;
-  height: 80vh;
+  height: 90vh;
   width: 90%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  clear: both;
+  content: '';
+  display: table;
+}
 
+.container_left {
+  float: left;
+  width: 50%;
+}
+
+.profile_chat {
+  background-color: lightblue;
+  width: 30%;
+  height: 8vh;
+}
+
+.notification_chat {
+  background-color: red;
+  width: 30%;
+  height: 10vh;
+}
+
+.search_bar {
+  background-color: green;
+  width: 30%;
+  height: 5vh;
+}
+.list_name_chat {
+  background-color: orange;
+  width: 30%;
+  height: 67vh;
+}
+.current_chat {
+  background-color: lightblue;
+  height: 8vh;
+  width: 70%;
 }
