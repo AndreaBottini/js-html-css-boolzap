@@ -10,7 +10,7 @@ body {
 }
 
 .profile_left img{
-  width: 50px;
+  width: 60px;
   border-radius: 50%;
   padding-left: 10px;
 }
@@ -60,7 +60,8 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #EDE4E7;
-  height: 8vh;
+  /* height: 8vh; */
+  padding: 5px 0;
 }
 
 .notification_chat {
@@ -68,7 +69,8 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #84D3FA;
-  height: 10vh;
+  /* height: 10vh; */
+  padding: 10px 0;
 }
 
 .notification_left {
@@ -94,8 +96,25 @@ body {
 }
 
 .search_bar {
-  background-color: green;
+  display: flex;
+  align-items: center;
+  background-color: white;;
   height: 5vh;
+  margin: 3px;
+  border: 1px solid lightgrey;
+}
+
+.search_bar i {
+  font-size: 20px;
+  color: lightgrey;
+  padding-left: 20px;
+}
+
+.search_bar p {
+  font-size: 14px;
+  color: grey;
+  font-weight: bold;
+  padding-left: 20px;
 }
 
 .list_name_chat {
