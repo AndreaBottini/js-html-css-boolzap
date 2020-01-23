@@ -98,7 +98,7 @@ body {
 .search_bar {
   display: flex;
   align-items: center;
-  background-color: white;;
+  background-color: white;
   height: 5vh;
   margin: 3px;
   border: 1px solid lightgrey;
@@ -118,8 +118,17 @@ body {
 }
 
 .list_name_chat {
+  display: flex;
+  flex-direction: column;
   background-color: orange;
-  height: 67vh;
+  /* height: 67vh; */
+}
+
+.person_chat {
+  background-color: white;;
+  height: 8vh;
+  margin-right: 5px;
+  border: 1px solid lightgrey;
 }
 
 .container_right {
