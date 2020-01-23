@@ -69,3 +69,11 @@ body {
   background-color: lightblue;
   height: 8vh;
 }
+.field_chat {
+  background-color: lightgreen;
+  height: 74vh;
+}
+.message_field {
+  background-color: lightgrey;
+  height: 8vh;
+}
