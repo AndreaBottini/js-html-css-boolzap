@@ -9,6 +9,18 @@ body {
   font-size: 12px;
 }
 
+.profile_left img{
+  width: 50px;
+  border-radius: 50%;
+  padding-left: 10px;
+}
+
+.position {
+  color: grey;
+  font-size: 20px;
+  padding-right: 20px;
+}
+
 .wrapper {
   position: relative;
   background-color: pink;
@@ -16,12 +28,12 @@ body {
 }
 
 .background_top {
-  background-color: lime;
+  background-color: #11897D;
   height: 20vh;
 }
 
 .background_main {
-  background-color: grey;
+  background-color: #D3D5D0;
   height: 80vh;
 }
 
@@ -44,27 +56,58 @@ body {
 }
 
 .profile_chat {
-  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #EDE4E7;
   height: 8vh;
 }
 
 .notification_chat {
-  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #84D3FA;
   height: 10vh;
+}
+
+.notification_left {
+  display: flex;
+  align-items: center;
+}
+
+.notification_left i {
+  font-size: 30px;
+  padding-left: 20px;
+  color: white;
+}
+
+.notification_right p {
+  padding-right: 70px;
+  font-size: 16px;
+}
+
+.notification_right a {
+  padding-right: 70px;
+  font-size: 12px;
+  color: grey;
 }
 
 .search_bar {
   background-color: green;
   height: 5vh;
 }
+
 .list_name_chat {
   background-color: orange;
   height: 67vh;
 }
+
 .container_right {
   float: right;
   width: 70%;
 }
+
 .current_chat {
   background-color: lightblue;
   height: 8vh;
@@ -73,7 +116,8 @@ body {
   background-color: lightgreen;
   height: 74vh;
 }
+
 .message_field {
-  background-color: lightgrey;
+  background-color: black;
   height: 8vh;
 }
