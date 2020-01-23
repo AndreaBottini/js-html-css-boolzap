@@ -6,4 +6,32 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.wrapper {
+  position: relative;
+  background-color: pink;
+  height: 100vh;
+}
+
+.background_top {
+  background-color: lime;
+  height: 20vh;
+}
+
+.background_main {
+  background-color: grey;
+  height: 80vh;
+}
+
+.chat_box {
+  position: absolute;
+  background-color: yellow;
+  height: 80vh;
+  width: 90%;
+  top: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+
 }
