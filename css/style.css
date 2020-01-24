@@ -206,11 +206,44 @@ body {
 }
 
 .field_chat {
-  background-color: lightgreen;
+  background-image: url(../img/mine.jpg);
+  padding: 50px;
   height: 75vh;
+  overflow-y: scroll;
+}
+
+.message {
+  min-width: 30%;
+  max-width: 70%;
+  margin: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.message_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message_bottom {
+  text-align: right;
+}
+
+.message_time {
+
+}
+
+.message.sent{
+  float: right;
+  background-color: #D1F9B7;
+}
+
+.message.received {
+  float: left;
+  background-color: white;
+  clear: both;
 }
 
 .message_field {
-  background-color: black;
-  height: 8vh;
+  height: 60px;
 }
