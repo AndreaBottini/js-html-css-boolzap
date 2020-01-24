@@ -18,6 +18,12 @@ body {
 .list_name_chat img {
   width: 60px;
   border-radius: 50%;
+  padding-left: 10px;
+}
+
+.current_chat img {
+  width: 60px;
+  border-radius: 50%;
   padding-left: 20px;
 }
 
@@ -160,11 +166,11 @@ body {
 }
 
 .contact_name {
-  text-align: left;
 }
 
 .contact_time {
   margin-right: 20px;
+  color: grey;
 }
 
 .info_chat_top {
@@ -183,13 +189,25 @@ body {
 }
 
 .current_chat {
-  background-color: lightblue;
-  height: 8vh;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #EDE4E7;
+  border-left: 1px solid lightgrey;
+
+}
+.contact_active {
+  width: 75%;
+}
+
+.contact_name {
+  text-align: left;
 }
 
 .field_chat {
   background-color: lightgreen;
-  height: 74vh;
+  height: 75vh;
 }
 
 .message_field {
