@@ -15,6 +15,12 @@ body {
   padding-left: 10px;
 }
 
+.list_name_chat img {
+  width: 60px;
+  border-radius: 50%;
+  padding-left: 20px;
+}
+
 .position {
   color: grey;
   font-size: 20px;
@@ -49,7 +55,11 @@ body {
 
 .container_left {
   width: 30%;
+  height: 100%;
   float: left;
+}
+
+.container_left:after {
   clear: both;
   content: '';
   display: table;
@@ -60,22 +70,23 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #EDE4E7;
-  /* height: 8vh; */
+  height: 60px;
   padding: 5px 0;
 }
 
 .notification_chat {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #84D3FA;
-  /* height: 10vh; */
+  height: 70px;
   padding: 10px 0;
 }
 
 .notification_left {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .notification_left i {
@@ -85,8 +96,10 @@ body {
 }
 
 .notification_right p {
+  justify-content: center;
+  align-items: center;
   padding-right: 70px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .notification_right a {
@@ -99,7 +112,7 @@ body {
   display: flex;
   align-items: center;
   background-color: white;
-  height: 5vh;
+  height: 30px;
   margin: 3px;
   border: 1px solid lightgrey;
 }
@@ -120,15 +133,40 @@ body {
 .list_name_chat {
   display: flex;
   flex-direction: column;
-  background-color: orange;
-  /* height: 67vh; */
+  background-color: white;
+  height: calc(100% - 165px);
+  overflow-y: scroll;
 }
 
 .person_chat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: white;;
-  height: 8vh;
-  margin-right: 5px;
+  height: 60px;
   border: 1px solid lightgrey;
+}
+
+.info_chat {
+  width: 80%;
+}
+
+.contact_name {
+  text-align: left;
+}
+
+.contact_time {
+  margin-right: 20px;
+}
+
+.info_chat_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_chat_bottom {
+  padding-top: 5px;
+  color: grey;
 }
 
 .container_right {
@@ -140,6 +178,7 @@ body {
   background-color: lightblue;
   height: 8vh;
 }
+
 .field_chat {
   background-color: lightgreen;
   height: 74vh;
