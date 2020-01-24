@@ -45,7 +45,7 @@ body {
 
 .chat_box {
   position: absolute;
-  background-color: yellow;
+  background-color: white;
   height: 90vh;
   width: 90%;
   top: 50%;
@@ -111,23 +111,31 @@ body {
 .search_bar {
   display: flex;
   align-items: center;
-  background-color: white;
-  height: 30px;
-  margin: 3px;
-  border: 1px solid lightgrey;
+  height: 40px;
 }
 
-.search_bar i {
+.search_icon {
   font-size: 20px;
   color: lightgrey;
   padding-left: 20px;
 }
 
-.search_bar p {
-  font-size: 14px;
-  color: grey;
-  font-weight: bold;
-  padding-left: 20px;
+.wrapper_input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid lightgrey;
+  margin: auto;
+  width: 95%;
+  height: 80%;
+}
+
+.wrapper_input input {
+  border: 0;
+  width: 80%;
+  height: 100%;
+
 }
 
 .list_name_chat {
