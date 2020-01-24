@@ -141,14 +141,13 @@ body {
   border: 0;
   width: 80%;
   height: 100%;
-
 }
 
 .list_name_chat {
   display: flex;
   flex-direction: column;
   background-color: white;
-  height: calc(100% - 165px);
+  height: calc(100% - 170px);
   overflow-y: scroll;
 }
 
@@ -163,9 +162,6 @@ body {
 
 .info_chat {
   width: 80%;
-}
-
-.contact_name {
 }
 
 .contact_time {
@@ -186,6 +182,7 @@ body {
 .container_right {
   float: right;
   width: 70%;
+  height: 100%;
 }
 
 .current_chat {
@@ -208,7 +205,7 @@ body {
 .field_chat {
   background-image: url(../img/mine.jpg);
   padding: 50px;
-  height: 75vh;
+  height: calc(100% - 120px);
   overflow-y: scroll;
 }
 
@@ -245,5 +242,20 @@ body {
 }
 
 .message_field {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 60px;
+}
+
+.message_field_icon {
+  color: grey;
+  font-size: 25px;
+}
+
+.send_message {
+  width: 80%;
+  height: 70%;
+  font-size: 14px;
+  padding-left: 10px;
 }
