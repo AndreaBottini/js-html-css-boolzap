@@ -7,8 +7,14 @@ $(document).ready(function () {
       sendMessage();
     }
   });
-  $(document).on('click', function() {
-    activeChat();
+  //CHAT ATTIVE
+  $(document).on('click', '.person_chat', function() {
+    var contents = $(this).attr('data-contact');
+    console.log(contents);
+    $('.person_chat').removeClass('active');
+    $('.field_chat').removeClass('active');
+    $(this).addClass('active');
+    $('.field_chat[data-contact="' + contents + '"]').addClass('active');
   });
 });
 
@@ -52,7 +58,7 @@ function sendMessage() {
 // FUNZIONE RISPOSTA MESSAGGIO
 function sendResponse() {
   var receivedMex = $('.template .message').clone();
-  receivedMex.find('.message_text').text('Sono contenta, quando ci vediamo?');
+  receivedMex.find('.message_text').text('Ok!');
   $('.field_chat').append(receivedMex);
   receivedMex.addClass('received');
 
@@ -65,12 +71,14 @@ function sendResponse() {
 };
 
 // FUNZIONE CHAT ATTIVA
-function activeChat() {
-  var contents = $('.person_chat').attr('data_contact');
-  console.log(contents[0]);
-  // $('.person_chat').removeClass('active');
-  // $('.field_chat').removeClass('active');
-}
+// function activeChat() {
+//   var contents = $('.person_chat').attr('data-contact');
+//   console.log(contents);
+//   $('.person_chat').removeClass('active');
+//   $('.field_chat').removeClass('active');
+//   $('.person_chat[data-contact="' + contents + '"]').addClass('active');
+//   $('.field_chat[data-contact="' + contents + '"]').addClass('active');
+// }
 
 
 
