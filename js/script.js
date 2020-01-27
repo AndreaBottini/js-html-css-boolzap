@@ -6,7 +6,10 @@ $(document).ready(function () {
     if (event.which == 13) {
       sendMessage();
     }
-  })
+  });
+  $(document).on('click', function() {
+    activeChat();
+  });
 });
 
 $('.search_bar input').keyup(function () {
@@ -64,8 +67,11 @@ function sendResponse() {
 // FUNZIONE CHAT ATTIVA
 function activeChat() {
   var contents = $('.person_chat').attr('data_contact');
-  console.log(contents);
+  console.log(contents[0]);
+  // $('.person_chat').removeClass('active');
+  // $('.field_chat').removeClass('active');
 }
+
 
 
 // FUNZIONE AGGIUNGI ZERO
