@@ -2,14 +2,19 @@ $(document).ready(function () {
   $('.icon_send').click(function () {
     sendMessage()
   });
-
-
 });
 
 $('.search_bar input').keyup(function () {
   var text = $('.search_bar input').val().toLowerCase();
   console.log(text);
-})
+
+  $('person_chat').each(function () {
+    var contactName = $(this).find('.contact').text().toLowerCase();
+    if(contactName.includes(text) == true){
+      console.log('incluso');
+    }
+  });
+});
 
 
 // INVIO MESSAGGIO
