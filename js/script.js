@@ -8,10 +8,13 @@ $('.search_bar input').keyup(function () {
   var text = $('.search_bar input').val().toLowerCase();
   console.log(text);
 
-  $('person_chat').each(function () {
-    var contactName = $(this).find('.contact').text().toLowerCase();
+  $('.person_chat').each(function () {
+    var contactName = $(this).find('.contact_name').text().toLowerCase();
     if(contactName.includes(text) == true){
-      console.log('incluso');
+      // console.log('incluso');
+      $(this).show();
+    } else {
+      $(this).hide();
     }
   });
 });
@@ -52,8 +55,6 @@ function sendResponse() {
   receivedMex.find('.message_time').text(time);
   console.log(receivedMex);
 }
-
-// FUNZIONE RICERCA CONTATTO
 
 
 // FUNZIONE AGGIUNGI ZERO
