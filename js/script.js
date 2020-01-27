@@ -2,6 +2,11 @@ $(document).ready(function () {
   $('.icon_send').click(function () {
     sendMessage()
   });
+  $('.send_message').keypress(function(event) {
+    if (event.which == 13) {
+      sendMessage();
+    }
+  })
 });
 
 $('.search_bar input').keyup(function () {
@@ -54,6 +59,12 @@ function sendResponse() {
   var time = hours + ':' + minutes;
   receivedMex.find('.message_time').text(time);
   console.log(receivedMex);
+};
+
+// FUNZIONE CHAT ATTIVA
+function activeChat() {
+  var contents = $('.person_chat').attr('data_contact');
+  console.log(contents);
 }
 
 
