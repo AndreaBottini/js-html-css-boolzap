@@ -3,9 +3,14 @@ $(document).ready(function () {
     sendMessage()
   });
 
-  // RISPOSTA UTENTE DOPO UN SECONDO
 
 });
+
+$('.search_bar input').keyup(function () {
+  var text = $('.search_bar input').val().toLowerCase();
+  console.log(text);
+})
+
 
 // INVIO MESSAGGIO
 function sendMessage() {
@@ -23,25 +28,30 @@ function sendMessage() {
     newMessage.find('.message_time').text(time);
     newMessage.addClass('sent');
     $('.field_chat').append(newMessage);
+    setTimeout (sendResponse, 1000);
     $('input.send_message').val('');
   }
 };
 
-// RISPOSTA MESSAGGIO
-setTimeout (function() {
+// FUNZIONE RISPOSTA MESSAGGIO
+function sendResponse() {
   var receivedMex = $('.template .message').clone();
   receivedMex.find('.message_text').text('Sono contenta, quando ci vediamo?');
   $('.field_chat').append(receivedMex);
   receivedMex.addClass('received');
+
   var data = new Date()
   var hours = addZero(data.getHours());
   var minutes = addZero(data.getMinutes());
   var time = hours + ':' + minutes;
   receivedMex.find('.message_time').text(time);
   console.log(receivedMex);
-}, 1000);
+}
 
-// FUNZIONE AGGIUNGI zero
+// FUNZIONE RICERCA CONTATTO
+
+
+// FUNZIONE AGGIUNGI ZERO
 
  function addZero(number) {
    if(number < 10) {
