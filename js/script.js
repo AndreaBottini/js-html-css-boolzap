@@ -41,7 +41,7 @@ $('.search_bar input').keyup(function () {
   });
 });
 
-//DROPDOWN
+//DROPDOWN - MOSTRA E TOGLIE I MENU
 $(document).on('click', '.message_choice', function () {
   //toggleclass sull'elemento dropdown cliccato
     $(this).parent().siblings('.message_pop').toggleClass('active');
@@ -49,6 +49,10 @@ $(document).on('click', '.message_choice', function () {
     $(this).parents('.message').siblings('.message').find('.message_pop').removeClass('active');
   });
 
+//ELIMINA MESSAGGIO
+$(document).on('click', '.delete_message', function () {
+  $(this).parent().parent().parent().remove();
+});
 
 // INVIO MESSAGGIO
 function sendMessage() {
