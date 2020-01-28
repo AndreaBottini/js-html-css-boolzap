@@ -236,6 +236,7 @@ body {
 }
 
 .message {
+  position: relative;
   min-width: 50%;
   max-width: 70%;
   margin: 15px;
@@ -259,6 +260,7 @@ body {
 .message.sent{
   float: right;
   background-color: #D1F9B7;
+  clear: both;
 }
 
 .message.received {
@@ -288,4 +290,40 @@ body {
 
 .template {
   display: none;
+}
+
+.message:hover .message_choice,
+.message:active .message_choice,
+.message:focus .message_choice {
+  display: block;
+  cursor: pointer;
+}
+
+.message_choice {
+  display: none;
+}
+
+.message_pop {
+  position: absolute;
+  /* display: none; */
+  width: 40%;
+  background-color: white;
+  top: 30px;
+  right: 0;
+  padding: 10px;
+  text-align: right;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.message_pop ul {
+  list-style: none;
+}
+
+.message_pop li:first-child {
+  padding-bottom: 10px;
+}
+
+.message_pop.active {
+  display: block;
 }
