@@ -1,3 +1,5 @@
+/* regole generali */
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +12,12 @@ body {
   min-width: 800px;
 }
 
+.template {
+  display: none;
+}
+/* Regole generali */
+
+/* Sezione regole Img */
 .profile_left img{
   width: 60px;
   border-radius: 50%;
@@ -27,13 +35,14 @@ body {
   border-radius: 50%;
   padding-left: 20px;
 }
+/* Sezione regole Img */
 
 .position {
   color: grey;
   font-size: 20px;
   padding-right: 20px;
 }
-
+/* Regole corpo centrale */
 .wrapper {
   position: relative;
   background-color: pink;
@@ -96,7 +105,7 @@ body {
   justify-content: center;
 }
 
-.notification_right{
+.notification_right {
   width: 80%;
 }
 
@@ -116,13 +125,13 @@ body {
   font-size: 14px;
 }
 
-.notification_right a{
+.notification_right a {
   padding-top: 5px;
   font-size: 12px;
   color: grey;
 }
 
-.notification_right i{
+.notification_right i {
   padding-top: 5px;
   font-size: 10px;
   color: grey;
@@ -234,7 +243,9 @@ body {
 .field_chat.active {
   display: block;
 }
+/* regole corpo centrale */
 
+/* regole gestione messaggi */
 .message {
   position: relative;
   min-width: 50%;
@@ -257,7 +268,7 @@ body {
   color: grey;
 }
 
-.message.sent{
+.message.sent {
   float: right;
   background-color: #D1F9B7;
   clear: both;
@@ -286,10 +297,6 @@ body {
   height: 70%;
   font-size: 14px;
   padding-left: 10px;
-}
-
-.template {
-  display: none;
 }
 
 .message:hover .message_choice,
@@ -327,3 +334,4 @@ body {
 .message_pop.active {
   display: block;
 }
+/* regole gestione messaggi */

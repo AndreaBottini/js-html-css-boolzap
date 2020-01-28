@@ -1,13 +1,15 @@
+  //INVIO MESSAGGIO CON CLICK MOUSE
 $(document).ready(function () {
   $('.icon_send').click(function () {
     sendMessage()
   });
+  //INVIO MESSAGGIO CON TASTIERA
   $('.send_message').keypress(function(event) {
     if (event.which == 13) {
       sendMessage();
     }
   });
-  //CHAT ATTIVE
+  //CAMBIO VARIE CHAT
   $(document).on('click', '.person_chat', function() {
     var contents = $(this).attr('data-contact');
     console.log(contents);
@@ -16,20 +18,22 @@ $(document).ready(function () {
     $(this).addClass('active');
     $('.field_chat[data-contact="' + contents + '"]').addClass('active');
 
+    //CAMBIO ICONA E TESTO CHAT CORRENTE
     var name = $(this).find('.contact_name').text();
     var time = $(this).find('.contact_time').text();
     var image = $(this).find('img').attr('src');
-    console.log(image);
+    // console.log(image);
     $('.container_right .current_chat .contact_active .contact_name').text(name);
     $('.container_right .current_chat .contact_active .contact_time').text('Ultimo accesso alle ' + time);
     $('.container_right .current_chat img').attr('src', image);
   });
 });
-
+//RICERCA ELEMENTO DA BARRA DI RICERCA
 $('.search_bar input').keyup(function () {
   var text = $('.search_bar input').val().toLowerCase();
   console.log(text);
 
+//RICERCA PERSONA CHE VIENE MOSTRATA O MENO
   $('.person_chat').each(function () {
     var contactName = $(this).find('.contact_name').text().toLowerCase();
     if(contactName.includes(text) == true){
@@ -37,7 +41,7 @@ $('.search_bar input').keyup(function () {
       $(this).show();
     } else {
       $(this).hide();
-    }
+    };
   });
 });
 
@@ -54,7 +58,8 @@ $(document).on('click', '.delete_message', function () {
   $(this).parent().parent().parent().remove();
 });
 
-// INVIO MESSAGGIO
+// **********FUNZIONI***********
+//FUNZIONE INVIO MESSAGGIO
 function sendMessage() {
   var textMessage = $('input.send_message').val();
   console.log(textMessage);
@@ -72,7 +77,7 @@ function sendMessage() {
     $('.field_chat.active').append(newMessage);
     setTimeout (sendResponse, 1000);
     $('input.send_message').val('');
-  }
+  };
 };
 
 // FUNZIONE RISPOSTA MESSAGGIO
@@ -90,23 +95,20 @@ function sendResponse() {
   console.log(receivedMex);
 };
 
-// FUNZIONE CHAT ATTIVA
-// function activeChat() {
-//   var contents = $('.person_chat').attr('data-contact');
-//   console.log(contents);
-//   $('.person_chat').removeClass('active');
-//   $('.field_chat').removeClass('active');
-//   $('.person_chat[data-contact="' + contents + '"]').addClass('active');
-//   $('.field_chat[data-contact="' + contents + '"]').addClass('active');
-// }
-
-
-
 // FUNZIONE AGGIUNGI ZERO
-
  function addZero(number) {
    if(number < 10) {
      number = '0' + number;
    }
    return number;
- }
+};
+
+ // FUNZIONE CHAT ATTIVA
+ // function activeChat() {
+ //   var contents = $('.person_chat').attr('data-contact');
+ //   console.log(contents);
+ //   $('.person_chat').removeClass('active');
+ //   $('.field_chat').removeClass('active');
+ //   $('.person_chat[data-contact="' + contents + '"]').addClass('active');
+ //   $('.field_chat[data-contact="' + contents + '"]').addClass('active');
+ // }
