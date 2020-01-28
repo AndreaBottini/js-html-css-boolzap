@@ -27,6 +27,13 @@ $(document).ready(function () {
     $('.container_right .current_chat .contact_active .contact_time').text('Ultimo accesso alle ' + time);
     $('.container_right .current_chat img').attr('src', image);
   });
+
+  //CAMBIO ICONA ALL'INVIO MESSAGGIO
+  $('.send_message').focus(function() {
+    $('.icon_send i').removeClass('fa fa-microphone').addClass('fas fa-paper-plane');
+  }).blur(function() {
+      $('.icon_send i').removeClass('fas fa-paper-plane').addClass('fa fa-microphone');
+  });
 });
 //RICERCA ELEMENTO DA BARRA DI RICERCA
 $('.search_bar input').keyup(function () {
@@ -56,6 +63,15 @@ $(document).on('click', '.message_choice', function () {
 //ELIMINA MESSAGGIO
 $(document).on('click', '.delete_message', function () {
   $(this).parent().parent().parent().remove();
+});
+
+//CAMBIO ICONA ALL'INVIO MESSAGGIO
+$('.send_message').focus(function() {
+  $('.icon_send i').removeClass('fa fa-microphone').addClass('fas fa-paper-plane');
+}).blur(function() {
+  $('.send_message').focus(function() {
+    $('.icon_send i').removeClass('fas fa-paper-plane').addClass('fa fa-microphone');
+});
 });
 
 // **********FUNZIONI***********
