@@ -306,12 +306,12 @@ body {
 .message_pop {
   position: absolute;
   display: none;
-  width: 40%;
+  width: 35%;
   background-color: white;
   top: 30px;
   right: 0;
   padding: 10px;
-  text-align: right;
+  text-align: center;
   border-radius: 5px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
