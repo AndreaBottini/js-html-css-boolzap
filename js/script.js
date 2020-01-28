@@ -15,6 +15,14 @@ $(document).ready(function () {
     $('.field_chat').removeClass('active');
     $(this).addClass('active');
     $('.field_chat[data-contact="' + contents + '"]').addClass('active');
+
+    var name = $(this).find('.contact_name').text();
+    var time = $(this).find('.contact_time').text();
+    var image = $(this).find('img').attr('src');
+    console.log(image);
+    $('.container_right .current_chat .contact_active .contact_name').text(name);
+    $('.container_right .current_chat .contact_active .contact_time').text('Ultimo accesso alle ' + time);
+    $('.container_right .current_chat img').attr('src', image);
   });
 });
 
@@ -49,7 +57,7 @@ function sendMessage() {
     var time = hours + ':' + minutes;
     newMessage.find('.message_time').text(time);
     newMessage.addClass('sent');
-    $('.field_chat').append(newMessage);
+    $('.field_chat.active').append(newMessage);
     setTimeout (sendResponse, 1000);
     $('input.send_message').val('');
   }
@@ -59,7 +67,7 @@ function sendMessage() {
 function sendResponse() {
   var receivedMex = $('.template .message').clone();
   receivedMex.find('.message_text').text('Ok!');
-  $('.field_chat').append(receivedMex);
+  $('.field_chat.active').append(receivedMex);
   receivedMex.addClass('received');
 
   var data = new Date()
