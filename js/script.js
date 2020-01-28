@@ -41,6 +41,14 @@ $('.search_bar input').keyup(function () {
   });
 });
 
+//DROPDOWN
+$(document).on('click', '.message_choice', function () {
+  //toggleclass sull'elemento dropdown cliccato
+    $(this).parent().siblings('.message_pop').toggleClass('active');
+    //tolgo classe active ai dropdown dei message_pop
+    $(this).parents('.message').siblings('.message').find('.message_pop').removeClass('active');
+  });
+
 
 // INVIO MESSAGGIO
 function sendMessage() {

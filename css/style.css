@@ -305,7 +305,7 @@ body {
 
 .message_pop {
   position: absolute;
-  /* display: none; */
+  display: none;
   width: 40%;
   background-color: white;
   top: 30px;
